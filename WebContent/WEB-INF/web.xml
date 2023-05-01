@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Edcars_Project</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>sendSeller</servlet-name>
+    <servlet-class>Controller.sendEmail</servlet-class>
+    <multipart-config>
+      <max-file-size>10485760</max-file-size>
+      <max-request-size>20971520</max-request-size>
+      <file-size-threshold>5242880</file-size-threshold>
+    </multipart-config>
+  </servlet>
+  <servlet>
+    <servlet-name>sendBuyer</servlet-name>
+    <servlet-class>Controller.sendBuyerEmail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sendSeller</servlet-name>
+    <url-pattern>/SendMail.html</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>sendBuyer</servlet-name>
+    <url-pattern>/SendBuyerMail.html</url-pattern>
+  </servlet-mapping>
+    
+  <servlet>
+    <servlet-name>placeCarSpecs</servlet-name>
+    <servlet-class>Controller.BuyerEmailController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>placeCarSpecs</servlet-name>
+    <url-pattern>/sendBuyRequest.html</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>insertFAQS</servlet-name>
+    <servlet-class>Controller.faqsInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>insertFAQS</servlet-name>
+    <url-pattern>/faqsInsert.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateFAQS</servlet-name>
+    <servlet-class>Controller.faqsUpdate</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateFAQS</servlet-name>
+    <url-pattern>/faqsUpdate.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteFAQS</servlet-name>
+    <servlet-class>Controller.faqsDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteFAQS</servlet-name>
+    <url-pattern>/faqsDelete.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>resultFAQS</servlet-name>
+    <servlet-class>Controller.faqsResult</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>resultFAQS</servlet-name>
+    <url-pattern>/faqsResult.html</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>changePass</servlet-name>
+    <servlet-class>Controller.changePassword</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>changePass</servlet-name>
+    <url-pattern>/changePass.html</url-pattern>
+  </servlet-mapping>
+  <!-- Inventory servlets -->
+  <!-- Car insertion servlet -->
+  	 <servlet>
+  		<servlet-name>insertCar</servlet-name>
+  		<servlet-class>Controller.inventoryInsert</servlet-class>
+  	 </servlet>
+  	 <servlet-mapping>
+  	    <servlet-name>insertCar</servlet-name>
+  	    <url-pattern>/inventoryInsert.html</url-pattern>
+     </servlet-mapping>
+  <!-- Car update servlet -->
+ 	 <servlet>
+ 	 	<servlet-name>updateCar</servlet-name>
+ 	 	<servlet-class>Controller.inventoryUpdate</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>updateCar</servlet-name>
+ 	   <url-pattern>/inventoryUpdate.html</url-pattern>
+ 	 </servlet-mapping>
+  <!-- Car Deletion servlet -->
+  	 <servlet>
+ 	 	<servlet-name>deleteCar</servlet-name>
+ 	 	<servlet-class>Controller.inventoryDelete</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>deleteCar</servlet-name>
+ 	   <url-pattern>/inventoryDelete.html</url-pattern>
+ 	 </servlet-mapping>	 
+ 	 
+  <!-- Transaction servlets -->
+  <!-- transaction insertion servlet -->
+  	 <servlet>
+  		<servlet-name>insertTransact</servlet-name>
+  		<servlet-class>Controller.transactionInsert</servlet-class>
+  	 </servlet>
+  	 <servlet-mapping>
+  	    <servlet-name>insertTransact</servlet-name>
+  	    <url-pattern>/transactionInsert.html</url-pattern>
+     </servlet-mapping>
+  <!-- transaction update servlet -->
+ 	 <servlet>
+ 	 	<servlet-name>updateTransact</servlet-name>
+ 	 	<servlet-class>Controller.transactionUpdate</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>updateTransact</servlet-name>
+ 	   <url-pattern>/transactionUpdate.html</url-pattern>
+ 	 </servlet-mapping>
+  <!-- transaction Deletion servlet -->
+  	 <servlet>
+ 	 	<servlet-name>deleteTransact</servlet-name>
+ 	 	<servlet-class>Controller.transactionDelete</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>deleteTransact</servlet-name>
+ 	   <url-pattern>/transactionDelete.html</url-pattern>
+ 	 </servlet-mapping>
+ 	 
+  <!-- Client servlets -->
+  <!-- transaction update servlet -->
+ 	 <servlet>
+ 	 	<servlet-name>updateClient</servlet-name>
+ 	 	<servlet-class>Controller.clientUpdate</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>updateClient</servlet-name>
+ 	   <url-pattern>/clientUpdate.html</url-pattern>
+ 	 </servlet-mapping>  
+ 	 
+  <!-- ManagementInventory result servlet  -->
+  	 <servlet>
+ 	 	<servlet-name>manageInventoryResult</servlet-name>
+ 	 	<servlet-class>Controller.managementInventoryResult</servlet-class>
+ 	 </servlet>
+ 	 <servlet-mapping>
+ 	   <servlet-name>manageInventoryResult</servlet-name>
+ 	   <url-pattern>/generateTables.html</url-pattern>
+ 	 </servlet-mapping>
+ 	 
+ <!-- Transaction insertion -->
+     <servlet>
+  		<servlet-name>insertTransactTab</servlet-name>
+  		<servlet-class>Controller.transactionTabInsert</servlet-class>
+  	 </servlet>
+  	 <servlet-mapping>
+  	    <servlet-name>insertTransactTab</servlet-name>
+  	    <url-pattern>/transaction.html</url-pattern>
+     </servlet-mapping>
+   
+  <!-- Car selection -->
+     <servlet>
+  		<servlet-name>selectCar</servlet-name>
+  		<servlet-class>Controller.inventoryCarSearch</servlet-class>
+  	 </servlet>
+  	 <servlet-mapping>
+  	    <servlet-name>selectCar</servlet-name>
+  	    <url-pattern>/selectACar.html</url-pattern>
+     </servlet-mapping>  
+
+  
+  <context-param>
+    <param-name>fromEmail</param-name>
+    <param-value>edcarsdummyemail@gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>userName</param-name>
+    <param-value>edcarsdummyemail@gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>password</param-name>
+    <param-value>@EdcarsCompany_214</param-value>
+  </context-param>
+  <context-param>
+    <param-name>toEmail</param-name>
+    <param-value>edcarz808@gmail.com</param-value>
+  </context-param>
+  <context-param>
+    <param-name>host</param-name>
+    <param-value>smtp.gmail.com</param-value>
+  </context-param>
+</web-app>

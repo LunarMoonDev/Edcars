@@ -1,0 +1,47 @@
+/* FLOATING SIDE MENU */
+
+#menuJF {
+    width: 36px;
+    height: auto;
+    position: absolute;
+    z-index: 10;
+    margin-top: 300px;
+    top: 0px;
+    right: 0px;
+    text-align: left;
+    padding: 5px 2px 3px 0px;
+    background-color: #1b1b1b;
+    /* CORNER ROUNDING */
+    -moz-border-radius: 4px 0px 0px 4px;
+    -webkit-border-radius: 4px 0px 0px 4px;
+    border-radius: 8px 0px 0px 8px;
+    /* BORDER */
+    border: solid #000000;
+    border-width: 0px 0px 0px 0px;
+    /* NOTE: BORDERs ABOVE ARE | top | right | bottom | left */
+}
+
+#menuJF img {
+    display: block;
+    margin: 4px auto 4px 0px;
+    /* SPACE BETWEEN ICONS */
+}
+
+
+/***************
+Media Queries - WHEN PAGE WIDTH LESS THAN 482 IS ACTIVE
+***************/
+
+@media handheld and (max-width: 482px),
+screen and (max-device-width: 482px),
+screen and (max-width: 482px) {
+    /* HIDES FLOATING MENU ON SMARTPHONES - DELETE LINE TO ALLOW */
+    #menuJF {
+        display: none;
+    }
+}
+
+
+/***************
+END Media Queries
+***************/
